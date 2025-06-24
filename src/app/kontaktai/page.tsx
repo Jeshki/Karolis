@@ -42,13 +42,13 @@ export default function ContactsPage() {
     return (
       <AnimatedSection>
         <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900">{t('contact_page.title')}</h1> {/* Pakeista text-white į text-gray-900 */}
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-12"> {/* Pakeista text-white į text-gray-700 */}
+          <h1 className="text-4xl font-bold mb-4 text-gray-900">{t('contact_page.title')}</h1>
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-12">
               {t('contact_page.description')}
           </p>
 
-          <div className="bg-white p-8 rounded-lg shadow-xl mx-auto max-w-lg text-left"> {/* Pašalinta dark:bg-gray-800 */}
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">{t('contact_page.my_contacts')}</h2> {/* Pakeista text-white į text-gray-900 */}
+          <div className="bg-white p-8 rounded-lg shadow-xl mx-auto max-w-lg text-left">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">{t('contact_page.my_contacts')}</h2>
               <div className="space-y-6">
                   {contactItems.map((item, index) => (
                       <div key={index} className="flex items-center gap-4">
@@ -56,13 +56,13 @@ export default function ContactsPage() {
                               {item.icon}
                           </div>
                           <div className="flex-grow">
-                              <p className="font-bold text-gray-800">{item.label}</p> {/* Pašalinta dark:text-white */}
+                              <p className="font-bold text-gray-800">{item.label}</p>
                               {item.type === 'email' || item.type === 'phone' || item.type === 'social' ? (
                                   <a href={item.value} target={item.type === 'social' ? "_blank" : "_self"} rel={item.type === 'social' ? "noopener noreferrer" : undefined} className="text-teal-500 hover:underline break-all">
                                       {item.displayValue}
                                   </a>
                               ) : (
-                                  <p className="text-gray-600">{item.displayValue}</p> {/* Pašalinta dark:text-gray-400 */}
+                                  <p className="text-gray-600">{item.displayValue}</p>
                               )}
                           </div>
                       </div>
@@ -73,3 +73,4 @@ export default function ContactsPage() {
       </AnimatedSection>
     );
   }
+}
