@@ -9,7 +9,7 @@ export const Header = () => {
   const { t } = useTranslation(); 
 
   return (
-    <header className="bg-gray-800 dark:bg-gray-900 text-white dark:text-gray-100 p-8">
+    <header className="bg-gray-800  text-white p-8">
 
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-8">
         <div className="flex-shrink-0">
