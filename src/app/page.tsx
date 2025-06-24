@@ -1,24 +1,23 @@
-'use client'; // Privaloma naudoti React hooks (pvz., useTranslation)
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { AnimatedSection } from '@/app/components/AnimatedSection';
-import { useTranslation } from 'react-i18next'; // Importuojame useTranslation
+import { useTranslation } from 'react-i18next';
 
 export default function HomePage() {
-  const { t } = useTranslation(); // Inicializuojame hook'ą (i18n nebereikia, jei kalbos perjungimas pašalintas)
+  const { t } = useTranslation();
 
   return (
     <AnimatedSection>
       <div className="container mx-auto px-4 py-16 md:py-24">
-        {/* Čia nebebus kalbos pasirinkimo mygtukų */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
             <span className="text-teal-500 font-semibold">{t('homepage.title_prefix')}</span>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white mt-2 mb-4">
+            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mt-2 mb-4">
               {t('homepage.name')}
             </h1>
-            <p className="text-lg text-gray-300 mb-8">
+            <p className="text-lg text-gray-700 mb-8">
               {t('homepage.description')}
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
