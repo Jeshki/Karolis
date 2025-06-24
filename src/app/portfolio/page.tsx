@@ -1,39 +1,55 @@
+'use client'
+// src/app/portfolio/page.tsx
 import { ProjectCard } from './ProjectCard';
 import { AnimatedSection } from '@/app/components/AnimatedSection';
-
+import { useTranslation } from 'react-i18next'; // Importuokite useTranslation
 
 const projects = [
   {
-    title: 'Asmeninė CV ir Portfolio Svetainė',
-    description: 'Ši svetainė, kurioje dabar esate. Sukurta nuo nulio naudojant Next.js, TypeScript ir Tailwind CSS, siekiant sukurti greitą, modernią ir pilnai adaptyvią svetainę.',
-    imageUrl: '/images/portfolio-svetaine.png',
-    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-    liveUrl: '/',
+    title: 'Dusofi svetainė',
+    imageUrl: '/images/dusofi.png',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Vercel', 'Figma'],
+    liveUrl: 'http://www.dusofi.lt',
     repoUrl: '#',
   },
   {
-    title: 'E-komercijos Platformos Dizainas',
-    description: 'UX/UI dizaino projektas, kurtas Figma įrankiu. Analizuota vartotojų kelionė, kurti prototipai ir galutinis dizainas moderniai drabužių parduotuvei.',
-    imageUrl: '/images/ecommerce-dizainas.png',
-    tags: ['Figma', 'UX/UI Design', 'Prototyping'],
+    title: 'Dovilės Resume',
+    imageUrl: '/images/doviles.png',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Vercel'],
+    liveUrl: 'https://doviles-resume.vercel.app',
     repoUrl: '#',
   },
   {
-    title: 'Užduočių Valdymo Aplikacija (TODO)',
-    description: 'Klasikinė "TODO" aplikacija, kuri leidžia vartotojams kurti, redaguoti ir trinti užduotis. Puikus pratiktinis projektas įtvirtinti React pagrindus.',
-    imageUrl: '/images/todo-app.png',
-    tags: ['React', 'JavaScript', 'CSS Modules'],
-    liveUrl: '#',
+    title: 'Availane projektas',
+    imageUrl: '/images/avalaine.png',
+    tags: ['React', 'CSS', 'Vite', 'Vercel'],
+    liveUrl: 'https://availane.vercel.app',
+    repoUrl: '#',
+  },
+  {
+    title: 'RKNuotykiai.lt',
+    imageUrl: '/images/rknuotykiai.png',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Vercel', 'Figma'],
+    liveUrl: 'http://www.rknuotykiai.lt',
+    repoUrl: '#',
+  },
+  {
+    title: 'Deivido CV svetainė',
+    imageUrl: '/images/deividas.png',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Vercel'],
+    liveUrl: 'https://chomiciuscv.vercel.app/',
     repoUrl: '#',
   },
 ];
 
 export default function PortfolioPage() {
+  const { t } = useTranslation(); // Inicializuokite hook'ą
+
   return (
     <AnimatedSection>
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-center mb-2 text-gray-800 dark:text-white">Portfolio</h1>
-        <p className="text-lg text-center text-gray-600 dark:text-gray-400 mb-12">Mano atliktų darbų ir projektų pavyzdžiai.</p>
+        <h1 className="text-4xl font-bold text-center mb-2 text-gray-800 dark:text-white">{t('portfolio_page.title')}</h1>
+        <p className="text-lg text-center text-gray-600 dark:text-gray-400 mb-12">{t('portfolio_page.description')}</p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map(project => (

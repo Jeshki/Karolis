@@ -1,32 +1,37 @@
+'use client';
+
 import { BriefcaseIcon } from '@heroicons/react/24/solid';
+import { useTranslation } from 'react-i18next'; // Importuokite useTranslation
 
 export const ExperienceSection = () => {
+  const { t } = useTranslation(); // Inicializuokite hook'ą
+
   return (
     <>
       <h2 className="flex items-center text-2xl font-bold text-gray-300 border-b-2 border-teal-500 pb-2 mb-4">
         <BriefcaseIcon className="h-6 w-6 mr-3 text-teal-500" />
-        Darbo patirtis
+        {t('cv_page.experience_title')}
       </h2>
       <div className="space-y-6">
         <div className="pl-4 border-l-4 border-zinc-700">
-          <h3 className="text-xl font-semibold text-gray-200">Vadybininkas</h3>
-          <p className="text-md text-gray-400 italic">UAB „Medikatus” (prekyba kosmetinėmis priemonėmis) | 2008 – 2024-02 m.</p>
+          <h3 className="text-xl font-semibold text-gray-200">{t('cv_page.manager_position')}</h3>
+          <p className="text-md text-gray-400 italic">{t('cv_page.manager_company')} | {t('cv_page.manager_period')}</p>
           <ul className="list-disc list-inside mt-2 text-gray-400 space-y-1">
-            <li>Bendravimas su užsienio šalių partneriais, tiekėjais.</li>
-            <li>Elektroninės parduotuvės IT priežiūra, administravimas, įmonės svetainės SEO optimizavimas.</li>
-            <li>Pardavimų planavimas ir įmonės strategijos kūrimas.</li>
-            <li>Pirminė finansinė apskaita, darbas kasos aparatu, pagalba buhalteriui.</li>
-            <li>Prekių pristatymas didmenininkams ir sandėlio priežiūra.</li>
+            <li>{t('cv_page.manager_responsibilities_1')}</li>
+            <li>{t('cv_page.manager_responsibilities_2')}</li>
+            <li>{t('cv_page.manager_responsibilities_3')}</li>
+            <li>{t('cv_page.manager_responsibilities_4')}</li>
+            <li>{t('cv_page.manager_responsibilities_5')}</li>
           </ul>
-          <p className="mt-2 text-sm text-gray-300"><strong>Pagrindiniai įgūdžiai:</strong> organizaciniai, vadybiniai, komunikaciniai, planavimo, derybų vedimo, finansinės apskaitos, konfliktų sprendimo.</p>
+          <p className="mt-2 text-sm text-gray-300"><strong>{t('cv_page.manager_skills_prefix')}</strong> {t('cv_page.manager_skills')}</p>
         </div>
         <div className="pl-4 border-l-4 border-zinc-700">
-          <h3 className="text-xl font-semibold text-gray-200">Klientų aptarnavimo konsultantas</h3>
-          <p className="text-md text-gray-400 italic">UAB „Lintel“ (specializuotos informacijos paslaugos) | 2006 – 2007 m.</p>
+          <h3 className="text-xl font-semibold text-gray-200">{t('cv_page.consultant_position')}</h3>
+          <p className="text-md text-gray-400 italic">{t('cv_page.consultant_company')} | {t('cv_page.consultant_period')}</p>
           <ul className="list-disc list-inside mt-2 text-gray-400 space-y-1">
-            <li>Profesionalus klientų konsultavimas ir techninė pagalba telefonu IT srityje.</li>
+            <li>{t('cv_page.consultant_responsibilities_1')}</li>
           </ul>
-          <p className="mt-2 text-sm text-gray-300"><strong>Pagrindiniai įgūdžiai:</strong> komandinio darbo, problemų sprendimo, informacijos paieškos, komunikaciniai.</p>
+          <p className="mt-2 text-sm text-gray-300"><strong>{t('cv_page.consultant_skills_prefix')}</strong> {t('cv_page.consultant_skills')}</p>
         </div>
       </div>
     </>

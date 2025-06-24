@@ -1,5 +1,8 @@
+'use client';
+
 import { AcademicCapIcon, CheckBadgeIcon, LanguageIcon, WrenchScrewdriverIcon, BookOpenIcon, ComputerDesktopIcon, CommandLineIcon } from '@heroicons/react/24/solid';
 import { Pillar, CarFront, WinningMedalAward } from '@vectopus/atlas-icons-react';
+import { useTranslation } from 'react-i18next'; // Importuokite useTranslation
 
 import {
     SiFigma,
@@ -16,6 +19,8 @@ import {
 } from 'react-icons/si';
 
 export const SkillsSection = () => {
+    const { t } = useTranslation(); // Inicializuokite hook'ą
+
     return (
         <>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -23,28 +28,28 @@ export const SkillsSection = () => {
                   <section className="mb-8">
                     <h2 className="flex items-center text-2xl font-bold text-gray-700 dark:text-gray-300 border-b-2 border-teal-500 pb-2 mb-4">
                       <AcademicCapIcon className="h-6 w-6 mr-3 text-gray-500 dark:text-gray-400" aria-hidden="true" />
-                      Išsilavinimas 
+                      {t('cv_page.education_title')}
                     </h2>
                     <div className="space-y-4 text-gray-800 dark:text-gray-200">
                       <div className="flex items-start pl-4">
                           <Pillar size={24} className="h-5 w-5 mr-3 mt-1 text-gray-500 dark:text-gray-400 flex-shrink-0" aria-hidden="true" />
                           <div>
-                              <p className="font-semibold">Verslo vadybos ir analitikos bakalauras</p>
-                              <p className="text-sm text-gray-500 dark:text-gray-400">ISM vadybos ir ekonomikos universitetas | 2015 m.</p>
+                              <p className="font-semibold">{t('cv_page.bachelor_degree')}</p>
+                              <p className="text-sm text-gray-500 dark:text-gray-400">{t('cv_page.ism_university')} | 2015 m.</p>
                           </div>
                       </div>
                       <div className="flex items-start pl-4">
                           <ComputerDesktopIcon className="h-5 w-5 mr-3 mt-1 text-gray-500 dark:text-gray-400 flex-shrink-0" aria-hidden="true" />
                           <div>
-                              <p className="font-semibold">Front-end programavimas</p>
-                              <p className="text-sm text-gray-500 dark:text-gray-400">„Baltijos technologijų institutas” (BIT) | 2021 m.</p>
+                              <p className="font-semibold">{t('cv_page.frontend_programming_bit')}</p>
+                              <p className="text-sm text-gray-500 dark:text-gray-400">{t('cv_page.bit_academy')} | 2021 m.</p>
                           </div>
                       </div>
                       <div className="flex items-start pl-4">
                           <BookOpenIcon className="h-5 w-5 mr-3 mt-1 text-gray-500 dark:text-gray-400 flex-shrink-0" aria-hidden="true" />
                           <div>
-                              <p className="font-semibold">Front-End Developer</p>
-                              <p className="text-sm text-gray-500 dark:text-gray-400">www.codeacademy.com | Šiuo metu </p>
+                              <p className="font-semibold">{t('cv_page.frontend_developer_codecademy')}</p>
+                              <p className="text-sm text-gray-500 dark:text-gray-400">{t('cv_page.codecademy_platform')} | {t('cv_page.currently')}</p>
                           </div>
                       </div>
                     </div>
@@ -53,16 +58,24 @@ export const SkillsSection = () => {
                   <section>
                     <h2 className="flex items-center text-2xl font-bold text-gray-700 dark:text-gray-300 border-b-2 border-teal-500 pb-2 mb-4">
                       <WinningMedalAward size={24} className="h-6 w-6 mr-3 text-gray-500 dark:text-gray-400" aria-hidden="true" />
-                      Stiprybės ir kita
+                      {t('cv_page.strengths_and_other')}
                     </h2>
                        <div className="flex flex-wrap gap-2">
-                        {['Komunikabilumas', 'Sprendimų paieška', 'IT išmanymas', 'Atsparumas stresui', 'Saviugda ir tobulėjimas', 'Kantrybė', 'Pozityvumas'].map(skill => (
-                          <span key={skill} className="bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200 text-sm font-medium px-3 py-1 rounded-full">{skill}</span>
+                        {[
+                          'cv_page.communication_skill',
+                          'cv_page.problem_solving_skill',
+                          'cv_page.it_knowledge_skill',
+                          'cv_page.stress_resistance_skill',
+                          'cv_page.self_development_skill',
+                          'cv_page.patience_skill',
+                          'cv_page.positivity_skill'
+                        ].map(skillKey => (
+                          <span key={skillKey} className="bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200 text-sm font-medium px-3 py-1 rounded-full">{t(skillKey)}</span>
                         ))}
                        </div>
                        <div className="mt-4 pl-4 text-gray-800 dark:text-gray-200 flex items-center">
                            <CarFront size={24} className="h-5 w-5 mr-3 text-gray-500 dark:text-gray-400" aria-hidden="true" />
-                           <p className="font-semibold">B kategorijos vairuotojo pažymėjimas</p>
+                           <p className="font-semibold">{t('cv_page.driving_license')}</p>
                        </div>
                   </section>
                 </div>
@@ -71,32 +84,32 @@ export const SkillsSection = () => {
                   <section>
                     <h2 className="flex items-center text-2xl font-bold text-gray-700 dark:text-gray-300 border-b-2 border-teal-500 pb-2 mb-4">
                       <CheckBadgeIcon className="h-6 w-6 mr-3 text-gray-500 dark:text-gray-400" aria-hidden="true" />
-                      Įgūdžiai
+                      {t('cv_page.skills_title')}
                     </h2>
                     <div className="space-y-6 text-gray-800 dark:text-gray-200">
                       <div>
-                        <h3 className="flex items-center text-lg font-semibold mb-2"><LanguageIcon className="h-5 w-5 mr-2 text-gray-500 dark:text-gray-400" aria-hidden="true" />Užsienio kalbos</h3>
+                        <h3 className="flex items-center text-lg font-semibold mb-2"><LanguageIcon className="h-5 w-5 mr-2 text-gray-500 dark:text-gray-400" aria-hidden="true" />{t('cv_page.foreign_languages_title')}</h3>
                         <div className="space-y-2 pl-4">
                             <div className="flex items-center">
-                                <span>Anglų k. <em className="text-sm text-gray-500 dark:text-gray-400">(įgudęs)</em></span>
+                                <span>{t('cv_page.english_language')} <em className="text-sm text-gray-500 dark:text-gray-400">{t('cv_page.proficient')}</em></span>
                             </div>
                             <div className="flex items-center">
-                                <span>Rusų k. <em className="text-sm text-gray-500 dark:text-gray-400">(pažengęs)</em></span>
+                                <span>{t('cv_page.russian_language')} <em className="text-sm text-gray-500 dark:text-gray-400">{t('cv_page.advanced')}</em></span>
                             </div>
                         </div>
                       </div>
                       <div className="mt-6">
                         <h3 className="flex items-center text-lg font-semibold mb-2">
-                            <WrenchScrewdriverIcon className="h-5 w-5 mr-2 text-gray-500 dark:text-gray-400" aria-hidden="true" />Bendrieji Kompiuteriniai įgūdžiai
+                            <WrenchScrewdriverIcon className="h-5 w-5 mr-2 text-gray-500 dark:text-gray-400" aria-hidden="true" />{t('cv_page.general_computer_skills_title')}
                         </h3>
                         <div className="space-y-2 pl-4 mb-6">
-                            <div className="flex items-center"><span>MS Office (Word, Excel) <em className="text-sm text-gray-500 dark:text-gray-400">(profesionalus)</em></span></div>
-                            <div className="flex items-center"><span>Apskaitos pr. „Būtent“ <em className="text-sm text-gray-500 dark:text-gray-400">(įgudęs)</em></span></div>
-                            <div className="flex items-center"><span>Grafikos dizainas (Canva, Illustrator) <em className="text-sm text-gray-500 dark:text-gray-400">(profesionalus)</em></span></div>
+                            <div className="flex items-center"><span>{t('cv_page.ms_office_skills')} <em className="text-sm text-gray-500 dark:text-gray-400">{t('cv_page.professional')}</em></span></div>
+                            <div className="flex items-center"><span>{t('cv_page.accounting_software')} <em className="text-sm text-gray-500 dark:text-gray-400">{t('cv_page.proficient')}</em></span></div>
+                            <div className="flex items-center"><span>{t('cv_page.graphic_design_skills')} <em className="text-sm text-gray-500 dark:text-gray-400">{t('cv_page.professional')}</em></span></div>
                         </div>
 
                         <h3 className="flex items-center text-lg font-semibold mb-2">
-                          <CommandLineIcon className="h-5 w-5 mr-2 text-gray-500 dark:text-gray-400" aria-hidden="true" />Programavimo ir Web Technologijos
+                          <CommandLineIcon className="h-5 w-5 mr-2 text-gray-500 dark:text-gray-400" aria-hidden="true" />{t('cv_page.programming_web_tech_title')}
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pl-4">
                             <div className="flex items-center">

@@ -1,3 +1,5 @@
+'use client'
+
 import { Header } from '@/app/components/Header';
 import { AboutSection } from '@/app/components/AboutSection';
 import { ExperienceSection } from '@/app/components/ExperienceSection';

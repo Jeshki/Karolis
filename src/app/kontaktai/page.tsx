@@ -1,38 +1,41 @@
-'use client'; // Paliktas, nes komponentas naudoja kliento pusės funkcionalumą (nors useState pašalintas, animacija ir kt. gali reikalauti)
+'use client';
 
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { GitHubIcon, LinkedInIcon } from '../components/Icons';
 import { AnimatedSection } from '@/app/components/AnimatedSection';
+import { useTranslation } from 'react-i18next'; // Importuokite useTranslation
 
 export default function ContactsPage() {
+    const { t } = useTranslation(); // Inicializuokite hook'ą
+
     // Kontaktų duomenys naujam lentelės tipo išdėstymui
     const contactItems = [
         {
             icon: <EnvelopeIcon className="h-10 w-10 text-teal-500" />,
-            label: 'El. paštas',
+            label: t('contact_page.email_label'),
             value: 'mailto:karoliscibiras@gmail.com',
             displayValue: 'karoliscibiras@gmail.com',
             type: 'email',
         },
         {
             icon: <PhoneIcon className="h-10 w-10 text-teal-500" />,
-            label: 'Telefonas',
+            label: t('contact_page.phone_label'),
             value: 'tel:+37060302903',
             displayValue: '+370 603 02903',
             type: 'phone',
         },
         {
             icon: <GitHubIcon className="h-10 w-10 text-teal-500" />,
-            label: 'GitHub',
-            value: '#', // Čia įveskite tikrą GitHub profilio nuorodą
-            displayValue: 'KarolisČibiras', // Čia įveskite savo GitHub vartotojo vardą
+            label: t('contact_page.github_label'),
+            value: 'https://github.com/Jeshki', // Pakeiskite į tikrą GitHub profilio nuorodą
+            displayValue: 'Jeshki', // Pakeiskite į savo GitHub vartotojo vardą
             type: 'social',
         },
         {
             icon: <LinkedInIcon className="h-10 w-10 text-teal-500" />,
-            label: 'LinkedIn',
-            value: '#', // Čia įveskite tikrą LinkedIn profilio nuorodą
-            displayValue: 'Karolis Čibiras', // Čia įveskite savo LinkedIn vardą
+            label: t('contact_page.linkedin_label'),
+            value: 'https://www.linkedin.com/in/karolis-cibiras/', // Pakeiskite į tikrą LinkedIn profilio nuorodą
+            displayValue: 'Karolis Čibiras', // Pakeiskite į savo LinkedIn vardą
             type: 'social',
         },
     ];
@@ -40,15 +43,14 @@ export default function ContactsPage() {
     return (
       <AnimatedSection>
         <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">Susisiekime!</h1>
+          <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">{t('contact_page.title')}</h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
-              Esu atviras naujoms galimybėms, projektams ir bendradarbiavimui. Jei turite klausimų ar pasiūlymų, nedvejodami susisiekite su manimi.
+              {t('contact_page.description')}
           </p>
 
-          {/* Kontaktų informacija ir socialinių tinklų nuorodos viename lentelės tipo bloke */}
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-xl mx-auto max-w-lg text-left">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">Mano kontaktai</h2>
-              <div className="space-y-6"> {/* Naudojame space-y, kad sukurtume atstumą tarp eilučių */}
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">{t('contact_page.my_contacts')}</h2>
+              <div className="space-y-6">
                   {contactItems.map((item, index) => (
                       <div key={index} className="flex items-center gap-4">
                           <div className="flex-shrink-0">
