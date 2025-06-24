@@ -1,4 +1,3 @@
-
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -25,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="lt" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased bg-zinc-900 text-gray-200`}> {/* Pakeista: bg-gray-700 -> bg-zinc-800 */}
+      <body className={`${inter.variable} font-sans antialiased bg-gray-100 text-gray-900`}>
         <Providers>
           <div className="flex flex-col min-h-screen">
             <Navbar />
