@@ -101,7 +101,7 @@ export const Navbar = () => {
 
             <button
               onClick={toggleMenu}
-              className="p-3 rounded-md text-gray-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500"
+              className="p-3 rounded-md text-emerald-950 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500"
               aria-label="Toggle menu"
             >
               {isOpen ? (
