@@ -1,10 +1,10 @@
 'use client';
 
 import { BriefcaseIcon } from '@heroicons/react/24/solid';
-import { useTranslation } from 'react-i18next'; // Importuokite useTranslation
+import { useTranslation } from 'react-i18next'; 
 
 export const ExperienceSection = () => {
-  const { t } = useTranslation(); // Inicializuokite hook'ą
+  const { t } = useTranslation(); 
 
   return (
     <>

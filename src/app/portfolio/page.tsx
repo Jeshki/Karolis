@@ -2,7 +2,7 @@
 // src/app/portfolio/page.tsx
 import { ProjectCard } from './ProjectCard';
 import { AnimatedSection } from '@/app/components/AnimatedSection';
-import { useTranslation } from 'react-i18next'; // Importuokite useTranslation
+import { useTranslation } from 'react-i18next'; 
 
 const projects = [
   {
@@ -43,7 +43,7 @@ const projects = [
 ];
 
 export default function PortfolioPage() {
-  const { t } = useTranslation(); // Inicializuokite hook'ą
+  const { t } = useTranslation(); 
 
   return (
     <AnimatedSection>

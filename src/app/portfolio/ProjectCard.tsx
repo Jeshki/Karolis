@@ -2,7 +2,7 @@
 // src/app/portfolio/ProjectCard.tsx
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslation } from 'react-i18next'; // Importuokite useTranslation
+import { useTranslation } from 'react-i18next'; 
 import {
   SiNextdotjs,
   SiReact,

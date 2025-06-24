@@ -1,10 +1,10 @@
 'use client';
 
 import { UserIcon, CodeBracketIcon, SwatchIcon, BriefcaseIcon, AcademicCapIcon } from '@heroicons/react/24/solid';
-import { useTranslation } from 'react-i18next'; // Importuokite useTranslation
+import { useTranslation } from 'react-i18next'; 
 
 export const AboutSection = () => {
-  const { t } = useTranslation(); // Inicializuokite hook'ą
+  const { t } = useTranslation(); 
 
   return (
     <>

@@ -2,8 +2,7 @@
 
 import { AcademicCapIcon, CheckBadgeIcon, LanguageIcon, WrenchScrewdriverIcon, BookOpenIcon, ComputerDesktopIcon, CommandLineIcon } from '@heroicons/react/24/solid';
 import { Pillar, CarFront, WinningMedalAward } from '@vectopus/atlas-icons-react';
-import { useTranslation } from 'react-i18next'; // Importuokite useTranslation
-
+import { useTranslation } from 'react-i18next'; 
 import {
     SiFigma,
     SiTypescript,
@@ -19,7 +18,7 @@ import {
 } from 'react-icons/si';
 
 export const SkillsSection = () => {
-    const { t } = useTranslation(); // Inicializuokite hook'ą
+    const { t } = useTranslation();
 
     return (
         <>

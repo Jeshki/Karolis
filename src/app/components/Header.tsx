@@ -2,27 +2,27 @@
 
 import Image from 'next/image';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/solid';
-import profilePic from '@/../public/karolis.jpg';
-import { useTranslation } from 'react-i18next'; // Importuokite useTranslation
+
+import { useTranslation } from 'react-i18next'; 
 
 export const Header = () => {
-  const { t } = useTranslation(); // Inicializuokite hook'ą
+  const { t } = useTranslation(); 
 
   return (
     <header className="bg-gray-800 dark:bg-gray-900 text-white dark:text-gray-100 p-8">
-      {/* Pakeista max-w-6xl į max-w-4xl ir pritaikytas turinio centravimas */}
+
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-8">
         <div className="flex-shrink-0">
           <Image
-            src={profilePic}
-            alt={t('homepage.name')} // Pakeistas alt tekstas į verčiamą
+            src="/karolis.jpg"
+            alt={t('homepage.name')} 
             width={150}
             height={150}
             className="rounded-full border-4 border-teal-400 object-cover shadow-lg"
             priority
           />
         </div>
-        {/* Teksto turiniui pritaikytas centravimas */}
+        
         <div className="text">
           <h1 className="text-4xl md:text-5xl font-bold tracking-wider">{t('homepage.name')}</h1>
           <p className="text-xl md:text-2xl text-teal-300 mt-2">{t('cv_page.frontend_developer_title')}</p> {/* Pridėta nauja vertimo eilutė */}

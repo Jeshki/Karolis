@@ -1,11 +1,10 @@
 // src/app/components/Footer.tsx
-'use client'; // Būtina, kad veiktų useTranslation hook'as ir kiti kliento pusės funkcionalumai
-
+'use client'; 
 import { HeartIcon } from '@heroicons/react/24/solid';
-import { useTranslation } from 'react-i18next'; // Importuojame useTranslation hook'ą
+import { useTranslation } from 'react-i18next'; 
 
 export const Footer = () => {
-    const { t } = useTranslation(); // Inicializuojame hook'ą
+    const { t } = useTranslation(); 
     const currentYear = new Date().getFullYear();
 
     return (

@@ -6,34 +6,12 @@ import { AnimatedSection } from '@/app/components/AnimatedSection';
 import { useTranslation } from 'react-i18next'; // Importuojame useTranslation
 
 export default function HomePage() {
-  const { t, i18n } = useTranslation(); // Inicializuojame hook'ą ir gauname i18n objektą
-
-  // Funkcija kalbai pakeisti
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
+  const { t } = useTranslation(); // Inicializuojame hook'ą (i18n nebereikia, jei kalbos perjungimas pašalintas)
 
   return (
     <AnimatedSection>
       <div className="container mx-auto px-4 py-16 md:py-24">
-        {/* Kalbos pasirinkimo mygtukai su vėliavėlėmis */}
-        <div className="flex justify-end mb-8 space-x-2">
-          <button
-            onClick={() => changeLanguage('lt')}
-            className="p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
-            title="Lietuvių"
-          >
-            <Image src="/lietuva.png" alt="Lietuvos vėliava" width={30} height={20} className="rounded" />
-          </button>
-          <button
-            onClick={() => changeLanguage('en')}
-            className="p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
-            title="English"
-          >
-            <Image src="/anglija.png" alt="Anglijos vėliava" width={30} height={20} className="rounded" />
-          </button>
-        </div>
-
+        {/* Čia nebebus kalbos pasirinkimo mygtukų */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-center md:text-left">
             <span className="text-teal-500 font-semibold">{t('homepage.title_prefix')}</span>

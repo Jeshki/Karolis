@@ -3,12 +3,12 @@
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import { GitHubIcon, LinkedInIcon } from '../components/Icons';
 import { AnimatedSection } from '@/app/components/AnimatedSection';
-import { useTranslation } from 'react-i18next'; // Importuokite useTranslation
+import { useTranslation } from 'react-i18next'; 
 
 export default function ContactsPage() {
-    const { t } = useTranslation(); // Inicializuokite hook'ą
+    const { t } = useTranslation(); 
 
-    // Kontaktų duomenys naujam lentelės tipo išdėstymui
+    
     const contactItems = [
         {
             icon: <EnvelopeIcon className="h-10 w-10 text-teal-500" />,
@@ -27,15 +27,15 @@ export default function ContactsPage() {
         {
             icon: <GitHubIcon className="h-10 w-10 text-teal-500" />,
             label: t('contact_page.github_label'),
-            value: 'https://github.com/Jeshki', // Pakeiskite į tikrą GitHub profilio nuorodą
-            displayValue: 'Jeshki', // Pakeiskite į savo GitHub vartotojo vardą
+            value: 'https://github.com/Jeshki', 
+            displayValue: 'Jeshki', 
             type: 'social',
         },
         {
             icon: <LinkedInIcon className="h-10 w-10 text-teal-500" />,
             label: t('contact_page.linkedin_label'),
-            value: 'https://www.linkedin.com/in/karolis-cibiras/', // Pakeiskite į tikrą LinkedIn profilio nuorodą
-            displayValue: 'Karolis Čibiras', // Pakeiskite į savo LinkedIn vardą
+            value: 'https://www.linkedin.com/in/karolis-cibiras/', 
+            displayValue: 'Karolis Čibiras', 
             type: 'social',
         },
     ];

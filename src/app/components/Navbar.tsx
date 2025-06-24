@@ -6,8 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
-// Importuojame vėliavų komponentus. Jų pavadinimai atitinka ISO kodus.
-import { LT, GB } from 'country-flag-icons/react/3x2'; // Galite pasirinkti 1x1, 3x2, ar kitą dydį
+import { LT, GB } from 'country-flag-icons/react/3x2'; 
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -68,14 +67,14 @@ export const Navbar = () => {
                 title="Lietuvių"
                 className={`flex items-center justify-center p-2 rounded-md transition-opacity ${i18n.language === 'lt' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
               >
-                <LT className="w-6 h-6" /> {/* Naudojame LT komponentą */}
+                <LT className="w-6 h-6" /> 
               </button>
               <button
                 onClick={() => changeLanguage('en')}
                 title="English"
                 className={`flex items-center justify-center p-2 rounded-md transition-opacity ${i18n.language === 'en' ? 'opacity-100' : 'opacity-50 hover:opacity-100'}`}
               >
-                <GB className="w-6 h-6" /> {/* Naudojame GB komponentą */}
+                <GB className="w-6 h-6" /> 
               </button>
             </div>
           </div>
