@@ -126,7 +126,7 @@ export const Navbar = () => {
                   className={`block px-3 py-2 rounded-md text-lg font-medium transition-colors ${
                     isActive
                       ? 'bg-teal-500 text-white'
-                      : 'text-gray-300 hover:bg-teal-100'
+                      : 'text-white hover:bg-teal-100'
                   }`}
                 >
                   {link.name}
