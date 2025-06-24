@@ -43,7 +43,7 @@ export default function ContactsPage() {
     return (
       <AnimatedSection>
         <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">{t('contact_page.title')}</h1>
+          <h1 className="text-4xl font-bold mb-4 text-white ">{t('contact_page.title')}</h1>
           <p className="text-lg text-white max-w-2xl mx-auto mb-12">
               {t('contact_page.description')}
           </p>
