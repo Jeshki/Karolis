@@ -27,33 +27,33 @@ interface ProjectCardProps {
 const getTechnologyIcon = (tag: string) => {
   switch (tag.toLowerCase()) {
     case 'next.js':
-      return <SiNextdotjs className="h-5 w-5 text-gray-700" />; // Pašalinta dark:text-gray-300
+      return <SiNextdotjs className="h-5 w-5 text-gray-700" />;
     case 'react':
-      return <SiReact className="h-5 w-5 text-gray-700" />; // Pašalinta dark:text-gray-300
+      return <SiReact className="h-5 w-5 text-gray-700" />;
     case 'typescript':
-      return <SiTypescript className="h-5 w-5 text-gray-700" />; // Pašalinta dark:text-gray-300
+      return <SiTypescript className="h-5 w-5 text-gray-700" />;
     case 'tailwind css':
-      return <SiTailwindcss className="h-5 w-5 text-gray-700" />; // Pašalinta dark:text-gray-300
+      return <SiTailwindcss className="h-5 w-5 text-gray-700" />;
     case 'figma':
-      return <SiFigma className="h-5 w-5 text-gray-700" />; // Pašalinta dark:text-gray-300
+      return <SiFigma className="h-5 w-5 text-gray-700" />;
     case 'html':
-      return <SiHtml5 className="h-5 w-5 text-gray-700" />; // Pašalinta dark:text-gray-300
+      return <SiHtml5 className="h-5 w-5 text-gray-700" />;
     case 'css':
     case 'css modules':
-      return <SiCss3 className="h-5 w-5 text-gray-700" />; // Pašalinta dark:text-gray-300
+      return <SiCss3 className="h-5 w-5 text-gray-700" />;
     case 'javascript':
-      return <SiJavascript className="h-5 w-5 text-gray-700" />; // Pašalinta dark:text-gray-300
+      return <SiJavascript className="h-5 w-5 text-gray-700" />;
     case 'vercel':
-      return <SiVercel className="h-5 w-5 text-gray-700" />; // Pašalinta dark:text-gray-300
+      return <SiVercel className="h-5 w-5 text-gray-700" />;
     case 'vite':
-      return <SiVite className="h-5 w-5 text-gray-700" />; // Pašalinta dark:text-gray-300
+      return <SiVite className="h-5 w-5 text-gray-700" />;
     default:
       return null;
   }
 };
 
 export const ProjectCard = ({ title, imageUrl, tags, liveUrl }: ProjectCardProps) => {
-  const { t } = useTranslation(); // Inicializuokite hook'ą
+  const { t } = useTranslation();
 
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:-translate-y-2">
@@ -66,7 +66,7 @@ export const ProjectCard = ({ title, imageUrl, tags, liveUrl }: ProjectCardProps
             </div>
           ))}
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3> {/* Pakeista text-white į text-gray-900 */}
+        <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
 
         <div className="flex justify-center">
           {liveUrl && (
