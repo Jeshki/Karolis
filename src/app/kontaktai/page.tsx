@@ -44,12 +44,12 @@ export default function ContactsPage() {
       <AnimatedSection>
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">{t('contact_page.title')}</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
+          <p className="text-lg text-white max-w-2xl mx-auto mb-12">
               {t('contact_page.description')}
           </p>
 
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-xl mx-auto max-w-lg text-left">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">{t('contact_page.my_contacts')}</h2>
+          <div className="bg-white  p-8 rounded-lg shadow-xl mx-auto max-w-lg text-left">
+              <h2 className="text-2xl font-bold text-white mb-6 text-center">{t('contact_page.my_contacts')}</h2>
               <div className="space-y-6">
                   {contactItems.map((item, index) => (
                       <div key={index} className="flex items-center gap-4">
