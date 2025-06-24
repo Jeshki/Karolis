@@ -53,14 +53,13 @@ export const Navbar = () => {
                   className={`px-3 py-3 rounded-md text-base font-medium transition-colors ${
                     isActive
                       ? 'bg-teal-500 text-white'
-                      : 'text-white dark:text-white hover:bg-teal-100 dark:hover:bg-gray-700'
+                      : 'text-white hover:bg-teal-100'
                   }`}
                 >
                   {link.name}
                 </Link>
               );
             })}
-            {/* Kalbos pasirinkimas darbalaukio versijai */}
             <div className="ml-4 flex items-center space-x-2">
               <button
                 onClick={() => changeLanguage('lt')}
@@ -101,7 +100,7 @@ export const Navbar = () => {
 
             <button
               onClick={toggleMenu}
-              className="p-3 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500"
+              className="p-3 rounded-md text-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500"
               aria-label="Toggle menu"
             >
               {isOpen ? (
@@ -114,7 +113,6 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobilaus meniu išskleidimas */}
       {isOpen && (
         <div className="md:hidden bg-gray-800 pb-3">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -128,14 +126,13 @@ export const Navbar = () => {
                   className={`block px-3 py-2 rounded-md text-lg font-medium transition-colors ${
                     isActive
                       ? 'bg-teal-500 text-white'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-teal-100 dark:hover:bg-gray-700'
+                      : 'text-gray-300 hover:bg-teal-100'
                   }`}
                 >
                   {link.name}
                 </Link>
               );
             })}
-            {/* Kalbos pasirinkimas mobiliame meniu viduje */}
             <div className="pt-4 border-t border-gray-700 flex justify-center space-x-4">
               <button
                 onClick={() => changeLanguage('lt')}
