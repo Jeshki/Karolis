@@ -53,7 +53,7 @@ export const Navbar = () => {
                   className={`px-3 py-3 rounded-md text-base font-medium transition-colors ${
                     isActive
                       ? 'bg-teal-500 text-white'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-teal-100 dark:hover:bg-gray-700'
+                      : 'text-white dark:text-white hover:bg-teal-100 dark:hover:bg-gray-700'
                   }`}
                 >
                   {link.name}
