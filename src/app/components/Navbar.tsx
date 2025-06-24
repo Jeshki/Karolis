@@ -30,15 +30,15 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gray-800 shadow-md sticky top-0 z-50">
+    <nav className="bg-stone-200 shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center">
             <Image
               src="/jogy.svg"
               alt="Jogy Logo"
-              width={44}
-              height={44}
+              width={80}
+              height={80}
               priority
             />
           </Link>
@@ -52,8 +52,8 @@ export const Navbar = () => {
                   href={link.href}
                   className={`px-3 py-3 rounded-md text-base font-medium transition-colors ${
                     isActive
-                      ? 'bg-teal-500 text-white'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-teal-100 dark:hover:bg-gray-700'
+                      ? 'bg-teal-900 text-white'
+                      : 'text-teal-900 hover:bg-teal-700 hover:text-white'
                   }`}
                 >
                   {link.name}
@@ -101,7 +101,7 @@ export const Navbar = () => {
 
             <button
               onClick={toggleMenu}
-              className="p-3 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500"
+              className="p-3 rounded-md text-gray-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500"
               aria-label="Toggle menu"
             >
               {isOpen ? (
@@ -128,7 +128,7 @@ export const Navbar = () => {
                   className={`block px-3 py-2 rounded-md text-lg font-medium transition-colors ${
                     isActive
                       ? 'bg-teal-500 text-white'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-teal-100 dark:hover:bg-gray-700'
+                      : 'text-gray-300 hover:bg-gray-700'
                   }`}
                 >
                   {link.name}

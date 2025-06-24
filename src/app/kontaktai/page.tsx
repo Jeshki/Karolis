@@ -43,13 +43,13 @@ export default function ContactsPage() {
     return (
       <AnimatedSection>
         <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-white">{t('contact_page.title')}</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
+          <h1 className="text-4xl font-bold mb-4 text-stone-200 ">{t('contact_page.title')}</h1>
+          <p className="text-lg text-stone-200  max-w-2xl mx-auto mb-12">
               {t('contact_page.description')}
           </p>
 
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-xl mx-auto max-w-lg text-left">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">{t('contact_page.my_contacts')}</h2>
+          <div className="bg-stone-200  p-8 rounded-lg shadow-xl mx-auto max-w-lg text-left">
+              <h2 className="text-2xl font-bold text-stone-200  mb-6 text-center">{t('contact_page.my_contacts')}</h2>
               <div className="space-y-6">
                   {contactItems.map((item, index) => (
                       <div key={index} className="flex items-center gap-4">
@@ -57,13 +57,13 @@ export default function ContactsPage() {
                               {item.icon}
                           </div>
                           <div className="flex-grow">
-                              <p className="font-bold text-gray-800 dark:text-white">{item.label}</p>
+                              <p className="font-bold text-gray-800 ">{item.label}</p>
                               {item.type === 'email' || item.type === 'phone' || item.type === 'social' ? (
                                   <a href={item.value} target={item.type === 'social' ? "_blank" : "_self"} rel={item.type === 'social' ? "noopener noreferrer" : undefined} className="text-teal-500 hover:underline break-all">
                                       {item.displayValue}
                                   </a>
                               ) : (
-                                  <p className="text-gray-600 dark:text-gray-400">{item.displayValue}</p>
+                                  <p className="text-white ">{item.displayValue}</p>
                               )}
                           </div>
                       </div>
