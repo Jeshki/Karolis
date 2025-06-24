@@ -48,8 +48,8 @@ export default function PortfolioPage() {
   return (
     <AnimatedSection>
       <div className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-center mb-2 text-gray-800 dark:text-white">{t('portfolio_page.title')}</h1>
-        <p className="text-lg text-center text-gray-600 dark:text-gray-400 mb-12">{t('portfolio_page.description')}</p>
+        <h1 className="text-4xl font-bold text-center mb-2 text-white">{t('portfolio_page.title')}</h1>
+        <p className="text-lg text-center text-white mb-12">{t('portfolio_page.description')}</p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map(project => (
