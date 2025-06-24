@@ -8,7 +8,7 @@ import { AnimatedSection } from '@/app/components/AnimatedSection';
 
 export default function CvPage() {
   return (
-    <div className="bg-gray-100 min-h-screen text-gray-900">
+    <div className="bg-zinc-900 min-h-screen text-gray-200">
       <Header />
 
       <div className="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
@@ -16,13 +16,13 @@ export default function CvPage() {
           <AboutSection />
         </AnimatedSection>
 
-        <div className="my-12 border-t border-gray-300"></div>
+        <div className="my-12 border-t border-zinc-700"></div>
 
         <AnimatedSection>
           <ExperienceSection />
         </AnimatedSection>
 
-        <div className="my-12 border-t border-gray-300"></div>
+        <div className="my-12 border-t border-zinc-700"></div>
 
         <AnimatedSection>
           <SkillsSection />
