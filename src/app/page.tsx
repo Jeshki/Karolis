@@ -25,7 +25,7 @@ export default function HomePage() {
               <Link href="/portfolio" className="bg-teal-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-600 transition-transform transform hover:scale-105">
                 {t('homepage.my_work_button')}
               </Link>
-              <Link href="/cv" className="bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition-transform transform hover:scale-105">
+              <Link href="/kontaktai" className="bg-gray-800 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition-transform transform hover:scale-105">
                 {t('homepage.contact_button')}
               </Link>
             </div>

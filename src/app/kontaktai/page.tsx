@@ -49,7 +49,7 @@ export default function ContactsPage() {
           </p>
 
           <div className="bg-stone-200  p-8 rounded-lg shadow-xl mx-auto max-w-lg text-left">
-              <h2 className="text-2xl font-bold text-stone-800  mb-6 text-center">{t('contact_page.my_contacts')}</h2>
+              <h2 className="text-2xl font-bold text-stone-200  mb-6 text-center">{t('contact_page.my_contacts')}</h2>
               <div className="space-y-6">
                   {contactItems.map((item, index) => (
                       <div key={index} className="flex items-center gap-4">
